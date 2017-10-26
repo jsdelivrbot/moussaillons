@@ -1,0 +1,15 @@
+<h1> Nouveau moussaillon </h1>
+<br>
+
+	<%= form_tag moussaillons_path do%>
+		
+		<span><%= label_tag 'Choisis ton nom d\'utilisateur :'%></span><br>
+		<span>	<%= text_field_tag 'username'%></span><br>
+			
+		<span><%= label_tag 'Ton adresse e-mail :'%></span><br>
+		<span><%= text_field_tag 'email'%></span><br>
+
+		<span><%= submit_tag 'Inscription'%></span>
+
+	<%end%>
+
