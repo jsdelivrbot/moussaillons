@@ -5,6 +5,22 @@
 	<tr>
 		<td>username</td>
 		<td>mail</td>
-		<td>voir la bio</td>
+		<td>voir le profil</td>
+		<td>supprimer le profil</td>
 	</tr>
+
+<% @moussaillons.each do |moussaillon| %>
+
+	<tr>
+		<td><%= moussaillon.username%></td>
+		<td><%= moussaillon.email%></td>
+		<td><%=link_to'voir', moussaillon_path(moussaillon)%></td>
+		<td><%= link_to 'supprimer', moussaillon_path(moussaillon),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+
+<% end%>
+
+
 </table>

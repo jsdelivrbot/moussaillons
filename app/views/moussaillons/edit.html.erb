@@ -3,14 +3,16 @@
 	<%= form_tag moussaillon_path, method: :put do%>
 		
 		<span><%= label_tag 'Modifie ton nom d\'utilisateur :'%></span><br>
-		<span>	<%= text_field_tag 'username'%></span><br>
+		<span><%= text_field_tag 'username', '#{@moussaillon.username}'%></span><br>
 			
 		<span><%= label_tag 'Modifie ton adresse e-mail :'%></span><br>
 		<span><%= text_field_tag 'email'%></span><br>
 
 		<span><%= label_tag 'Modifie ta biographie :'%></span><br>
 		<span><%= text_field_tag 'bio'%></span><br>
-
-		<span><%= submit_tag 'Modifier'%></span>
+		<span><%= submit_tag 'Modifier'%></span><br>
 
 	<%end%>
+
+
+

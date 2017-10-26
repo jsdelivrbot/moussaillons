@@ -1,6 +1,7 @@
 class MoussaillonsController < ApplicationController
 
 	def index
+		@moussaillons = Moussaillon.all
 	end
 
 	def new
@@ -19,6 +20,10 @@ class MoussaillonsController < ApplicationController
 		@moussaillon = Moussaillon.find(params[:id])
 	end
 
+	def edit
+		@moussaillon = Moussaillon.find(params[:id])
+	end
+
   def update
     @moussaillon = Moussaillon.find(params[:id])
  
@@ -29,6 +34,11 @@ class MoussaillonsController < ApplicationController
     end
   end
 
+	def destroy
+	  @moussaillon = Moussaillon.find(params[:id])
+	  @moussaillon.destroy
+	  redirect_to moussaillons_path
+	end
 
 private
 
