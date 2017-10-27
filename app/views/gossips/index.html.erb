@@ -1,0 +1,21 @@
+<h1>THE HACKING PROJECT GOSSIPS</h1>
+
+<table>
+	<tr>TABLEAU D'HONNEUR</tr><br>
+	<tr><%= link_to 'MOUSSAILLONS', moussaillons_path %></tr>
+	<tr>
+		<td>Glorieux auteur</td>
+		<td>Glorieux contenu</td>
+		<td>Date</td>
+		<td>Voir</td>
+	</tr>
+
+	<% @gossips.each do |gossip| %>
+
+	<tr>
+		<td><%= gossip.moussaillon_id%></td>
+		<td><%= gossip.body%></td>
+	</tr>
+	<% end%>
+
+</table>

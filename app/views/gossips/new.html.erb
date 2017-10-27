@@ -1,0 +1,12 @@
+<h1> Nouveau ragot </h1>
+<br>
+
+	<%= form_tag moussaillon_gossips_path do%>
+		
+		<span><%= label_tag 'Dis nous tout :'%></span><br>
+		<span>	<%= text_area_tag 'body'%></span><br>
+	
+		<span><%= submit_tag 'Souiller'%></span>
+
+	<%end%>
+
